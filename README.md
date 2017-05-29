@@ -1,4 +1,4 @@
-# wpq-gulp-demo
+﻿# wangpq-gulp-study
 
 > 一个简单的gulp示例，使用了gulp-connect-multi自动检测html、css、js的改动并自动刷新,并提供合并压缩CSS、JS个功能。以及自动在html中替换压缩过后的css和js，并可以给css、js添加版本号，避免上传服务器后处出现缓存。
 
