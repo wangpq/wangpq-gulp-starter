@@ -42,10 +42,9 @@ gulp
 
 怎么办啊?改上面两个Gulp插件是最高效的方法了。
 
-1. 安装Gulp
+1. 安装gulp-rev、gulp-rev-collector
 
 ```bash
-npm install --save-dev gulp
 npm install --save-dev gulp-rev 
 npm install --save-dev gulp-rev-collector
 ```
@@ -72,3 +71,28 @@ npm install --save-dev gulp-rev-collector
 
 
 6. 结果达到预期
+
+
+***
+**批处理文件(脚本)快速执行命令**
+   
+> 在和gulpfile.js文件同级的目录下，我创建了好几个不同名的批处理脚本，以便快速执行我们需要的命令，执行它，只需要我们在下载下来的项目中，在所有的依赖模块都成功安装的情况下，双击它即可。
+
+1. dev.bat
+
+    主要用于开发调试阶段，使用gulp-connect-multi启动本地服务器,自动检测html、css、js的改动并自动刷新
+
+2. uat.bat
+
+3. live.bat
+   
+    用于生产项目，可压缩合并CSS、JS,并在html中替换合并后的css和js。(前提是在gulpfile.js和html文件中配置正确啦！)
+
+4. gulpRevCssJs.bat
+
+    用户生产的CSS、JS文件再次发到生产环境，可能会因为缓存的原因不能正确运行，我们可以在引入的css和js文件上添加版本号
+    双击gulpRevCssJs.bat文件就会产生这样的版本号。
+
+5. gulpRevHtml.bat
+    
+    将带版本号的css和js文件自动替换到html文件中。执行gulpRevHtml.bat前，请先确保执行过live.bat和gulpRevCssJs.bat
