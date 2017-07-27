@@ -50,7 +50,7 @@ npm install --save-dev gulp-rev-collector
 ```
 
 2. 打开 node_modules\gulp-rev\index.js,
-    第144行 manifest[originalFile] = revisionedFile; 
+    第134行 manifest[originalFile] = revisionedFile; 
 
     更新为: manifest[originalFile] = originalFile + '?v=' + file.revHash;
 
